@@ -1,10 +1,11 @@
 #include <stdio.h>
-
 /**
- * description - main
- * Return 0
+ * main - returns 0
+ *
+ * Description - main returns 0
+ * printf - Prints a formatted string
+ * Return: 0
  */
-
 int main(void)
 {
   printf("Size of a char: %d byte(s)\n", sizeof(char));
