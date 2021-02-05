@@ -3,21 +3,18 @@
 /**
  * main - Prints some letters of alphabet
  *
- * Return: Always (0)
+ * Return: Always 0 (Succes)
  */
 int main(void)
 {
-  char abc;
+char abc;
 
-  for (abc = 'a'; abc <= 'z'; abc++)
-    {
-      if (abc != 'e' && abc != 'q')
-	{
-	  putchar(abc);
-	}
-    }
+for (abc = 'a'; abc <= 'z'; abc++)
+{
+if (abc != 'e' && abc != 'q')
+putchar(abc);
+}
+putchar('\n');
 
-  putchar('\n');
-
-  return (0);
+return (0);
 }

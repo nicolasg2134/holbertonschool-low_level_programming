@@ -3,18 +3,18 @@
 /**
  * main - Prints the alphabet at reverse
  *
- * Return: Always (0)
+ * Return: Always 0 (Succes)
  */
 int main(void)
 {
-  char cba;
+char cba;
 
-  for (cba = 'z'; cba >= 'a'; cba--)
-    {
-      putchar(cba);
-    }
+for (cba = 'z'; cba >= 'a'; cba--)
+{
+putchar(cba);
+}
 
-  putchar('\n');
+putchar('\n');
 
-  return (0);
+return (0);
 }

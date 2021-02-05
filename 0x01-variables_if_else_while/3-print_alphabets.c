@@ -1,24 +1,27 @@
+#include <stdlib.h>
 #include <stdio.h>
 /**
- * main - Prints the alphabetic in lower and upper case
+ *main - Entry point
  *
- * Return: Always (Success)
+ *Description: Positive anything is better than negative nothing
+ *
+ *Return: Always 0 (Success)
  */
 int main(void)
 {
-  char abc;
+char abc;
+char ABC;
 
-  for (abc  = 'a'; c <= 'z'; abc++)
-    {
-      putchar(abc);
-    }
+for (abc  = 'a'; abc <= 'z'; abc++)
+{
+putchar(abc);
+}
 
-  for (abc = 'A'; c <= 'Z'; abc++)
-    {
-      putchar(abc);
-    }
+for (ABC = 'A'; ABC <= 'Z'; ABC++)
+putchar(ABC);
+}
 
-  putchar('\n');
+putchar('\n');
 
-  return (0);
+return (0);
 }
