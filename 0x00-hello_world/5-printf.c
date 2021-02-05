@@ -1,13 +1,12 @@
 #include <stdio.h>
 
 /**
- * Description - main returns 0
- * printf - Writes string and newline to stdout
- * Return: 0
+ * main - printf
+ * Return: 0 (Succes)
  */
 
 int main(void)
 {
-  printf("with proper grammar, but the outcome is a piece of art,\n");
-  return (0);
+printf("with proper grammar, but the outcome is a piece of art,\n");
+return (0);
 }
