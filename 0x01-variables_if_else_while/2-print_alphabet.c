@@ -1,11 +1,17 @@
 #include <stdio.h>
 
-int main (void) {
-  char Alpha;
+/**
+ * main - Prints the alphabetic
+ *
+ * Return: Always (0)
+ */
+int main(void)
+{
+  char c;
 
-  for(Alpha = 'A' ; Alpha <= 'Z' ; Alpha++) {
-    putchar(Alpha);
-  }
-   
-  return(0);
+  for (c = 'a'; c <= 'z'; c++)
+    putchar(c);
+
+  putchar('\n');
+  return (0);
 }
