@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  *main - Entry point
  *
@@ -7,13 +6,17 @@
  *
  *Return: Always 0 (Success)
  */
+
 int main(void)
 {
-char abc;
+	char abc;
 
-for (abc = 'a'; abc <= 'z'; abc++)
-putchar(abc);
-
-putchar('\n');
-return (0);
+	abc = 'a';
+	while (abc <= 'z')
+	{
+		putchar(abc);
+		abc++;
+	}
+	putchar('\n');
+	return (0);
 }
