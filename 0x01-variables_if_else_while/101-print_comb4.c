@@ -12,19 +12,19 @@
 
 int main(void)
 {
-	int a, b, c;
+	int x, y, z;
 
-	for (a = '0' ; a <= '7' ; a++)
+	for (x = '0' ; x <= '7' ; x++)
 	{
-		for (b = b + 1 ; b <= '8' ; b++)
+		for (y = x + 1 ; y <= '8' ; y++)
 		{
-			for (c = c + 1 ; c <= '9' ; c++)
+			for (z = y + 1 ; z <= '9' ; z++)
 			{
-				putchar(a);
-				putchar(b);
-				putchar(c);
+				putchar(x);
+				putchar(y);
+				putchar(z);
 
-				if ((a == '7') && (b == '8') && (c == '9'))
+				if ((x == '7') && (y == '8') && (z == '9'))
 				{
 					putchar('\n');
 				}
