@@ -3,7 +3,7 @@
 /**
  *main - Entry point
  *
- *Description: Positive anything is better than negative nothing
+ *Description: prints all possible different combinations
  *
  *Return: Always 0 (Success)
  */
@@ -12,7 +12,7 @@ int main(void)
 {
 	int a, b;
 
-	for (a = 10; n <= 18; a++)
+	for (a = 10; a <= 18; a++)
 	{
 		for (b = 11; b <= 19; b++)
 		{
