@@ -1,4 +1,4 @@
-#incluye "holberton.h"
+#include "holberton.h"
 /**
  * print_alphabet_x10 - print x10 alphabet
  *
@@ -8,13 +8,13 @@
 
 void print_alphabet_x10(void)
 {
-	int c = 0;
-	char abc;
+	int count = 0;
+	char a;
 
-	while (c++ <= 9)
+	while (count++ <= 9)
 	{
-		for (abc = 'a'; abc <= 'z'; abc++)
-			_putchar(abc);
+		for (a = 'a'; a <= 'z'; a++)
+			_putchar(a);
 		_putchar('\n');
 	}
 }
