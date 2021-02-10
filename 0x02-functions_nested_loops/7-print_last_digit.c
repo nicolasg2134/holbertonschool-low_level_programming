@@ -4,8 +4,6 @@
  * print_last_digit - int n
  *
  * @n: Valor
- * Description: int n
- *
  * Return: Always 0 (Succes)
  */
 
