@@ -3,7 +3,7 @@
 /**
  * print_last_digit - int n
  *
- * @ n: Valor
+ * @n: Valor
  * Description: int n
  *
  * Return: Always 0 (Succes)
