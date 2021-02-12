@@ -1,0 +1,17 @@
+#include "holberton.h"
+
+/**
+ * main - alphabet
+ gcc -Wall -pedantic -Werror -Wextra _putchar.c 2-main.c 2-print_alphabet_x10.c -o 2-alphabet_x10* print_alphabet void - alphabet
+ */
+
+void print_alphabet(void)
+{
+	char abc;
+
+	for (abc = 'a'; abc <= 'z'; abc++)
+	{
+		_putchar(abc);
+	}
+	_putchar('\n');
+}
