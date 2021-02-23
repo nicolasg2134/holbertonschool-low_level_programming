@@ -1,4 +1,4 @@
-#include "Holberton.h"
+#include "holberton.h"
 /**
  *_strncpy - Copy Strings
  * @dest: Detination String
@@ -15,8 +15,8 @@ char *_strncpy(char *dest, char *src, int n)
 
 	while(cpy < n && src[cpy] != '\0')
 	{
-		dest[cpy]=crc[cpy];
-		cpy++
+		dest[cpy] = src[cpy];
+		cpy++;
 
 }
 	while(cpy < n)
