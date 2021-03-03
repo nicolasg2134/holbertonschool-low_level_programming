@@ -5,10 +5,10 @@
  * @s: pointer of String
  *
  * Description: Create Funtion transform low to upper
- * Return s
+ * Return: Always (s)
  */
 
-char *string_toupper(char *s)
+char *string_toupper (char *s)
 {
 	int i = 0;
 
