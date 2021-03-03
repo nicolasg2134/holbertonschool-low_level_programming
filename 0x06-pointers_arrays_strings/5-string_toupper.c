@@ -8,7 +8,7 @@
  * Return: Always (s)
  */
 
-char *string_toupper (char *s)
+char *string_toupper(char *s)
 {
 	int i = 0;
 
@@ -16,7 +16,7 @@ char *string_toupper (char *s)
 	{
 		if (s[i] >= 'a' && s[i] <= 'z')
 		{
-			s[i] = s[i] - 'a' + 'A';
+			s[i] = s[i] - 32;
 		}
 		i++;
 	}
