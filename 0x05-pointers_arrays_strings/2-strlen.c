@@ -1,18 +1,19 @@
 #include "holberton.h"
-
 /**
  * _strlen - Swap the value of two integers
  * @s: Set of characters
  *
- * Return: noting
+ * Return: Nothing
  */
+
 int _strlen(char *s)
 {
-	int i;
+	int i = 0;
 
-	while (*(s + i))
-		{
-	      i++;
-		}
-	 return (i);
+	while (*(s + i) != '\0')
+	{
+		i++;
+	}
+
+	return (i);
 }
