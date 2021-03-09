@@ -4,7 +4,7 @@
  * @str: Set of characters
  *
  * Return: Nothing
- */
+*/
 void puts2(char *str)
 {
 	int i = 0;

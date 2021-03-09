@@ -1,22 +1,20 @@
 #include <stdio.h>
+/* more headers goes there */
+
+/* betty style doc for function main goes there */
+
 /**
- *main - Entry point
+ * main - Entry point
  *
- *Description: prints the alphabet in lower case
- *
- *Return: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char abc;
+	char c;
 
-	abc = 'a';
-	while (abc <= 'z')
-	{
-		putchar(abc);
-		abc++;
-	}
+	for (c = 'a'; c <= 'z'; c++)
+		putchar(c);
 	putchar('\n');
 	return (0);
 }

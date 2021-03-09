@@ -1,25 +1,27 @@
 #include <stdio.h>
+/* more headers goes there */
+
+/* betty style doc for function main goes there */
 
 /**
- * main - Prints a hexadecimal string
+ * main - Entry point
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-char nex;
-int num;
-for (num = '0'; num <= '9'; num++)
-{
-putchar(num);
-}
 
-for (nex = 'a'; nex <= 'f'; nex++)
-{
-putchar(nex);
-}
+	int n;
+	char c;
 
-putchar('\n');
+	for (n = 48; n <= 57; n++)
+		putchar(n);
 
-return (0);
+	for (c = 'a'; c <= 'f'; c++)
+		putchar(c);
+
+	putchar('\n');
+
+	return (0);
 }

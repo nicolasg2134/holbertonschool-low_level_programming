@@ -1,35 +1,34 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
-#include <ctype.h>
+/* more headers goes there */
+
+/* betty style doc for function main goes there */
+
 /**
- *main - Entry point
+ * main - Entry point
  *
- *Description: Positive anything is better than negative nothing
- *
- *Return: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int a, b;
 
-	for (a = '0' ; a <= '9' ; a++)
+	int i;
+	int j;
+
+	for (i = 48; i <= 57; i++)
 	{
-		for (b = '0' ; b <= '9' ; b++)
+		for (j = 48; j <= 57; j++)
 		{
-			putchar(a);
-			putchar(b);
-
-			if ((a == '9') && (b == '9'))
-			{
-				putchar('\n');
-			}
-			else
+			putchar(i);
+			putchar(j);
+			if (i < 57 || j < 57)
 			{
 				putchar(',');
 				putchar(' ');
 			}
 		}
 	}
+	putchar('\n');
+
 	return (0);
 }

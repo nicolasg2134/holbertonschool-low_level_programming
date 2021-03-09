@@ -1,33 +1,34 @@
 #include <stdio.h>
+/* more headers goes there */
+
+/* betty style doc for function main goes there */
 
 /**
- *main - Entry point
+ * main - Entry point
  *
- *Description: prints all possible different combinations
- *
- *Return: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int a, b;
 
-	for (a = 10; a <= 18; a++)
+	int i;
+	int j;
+
+	for (i = 48; i <= 57; i++)
 	{
-		for (b = 11; b <= 19; b++)
+		for (j = i + 1; j <= 57; j++)
 		{
-			if (b > a)
+			putchar(i);
+			putchar(j);
+			if (i < 56 || j < 57)
 			{
-				putchar(a);
-				putchar(b);
-				if (a != 18 || b != 19)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
 	putchar('\n');
+
 	return (0);
 }

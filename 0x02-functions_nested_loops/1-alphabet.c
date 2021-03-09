@@ -1,17 +1,14 @@
 #include "holberton.h"
-
 /**
- * print_alphabet - main 0
- * Return Always 0 (succes)
+ * print_alphabet - Print alphabet
+ *
+ * Return: There is no return value
  */
-
 void print_alphabet(void)
 {
-	char a;
+	int i;
 
-	for (a = 'a'; a <= 'z'; a++)
-	{
-		_putchar(a);
-	}
+	for (i = 'a'; i <= 'z'; i++)
+		_putchar(i);
 	_putchar('\n');
 }

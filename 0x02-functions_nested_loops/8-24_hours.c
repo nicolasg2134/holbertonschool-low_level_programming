@@ -1,23 +1,33 @@
 #include "holberton.h"
+
 /**
- * jack_bauer - check the code for Holberton School students.
+ * jack_bauer - Prints the hour in military format with EOL.
  *
- * Return: Always 0.
+ * Return: There is no return value (void).
  */
+
 void jack_bauer(void)
 {
-	int hora, min;
+	int i, j, k, l;
 
-	for (hora = 0; hora <= 23; hora++)
+	for (i = '0'; i <= '2'; i++)
 	{
-		for (min = 0; min <= 59; min++)
+		for (j = '0'; j <= '9'; j++)
 		{
-			_putchar((hora / 10) + '0');
-			_putchar((hora % 10) + '0');
-			_putchar(':');
-			_putchar((min / 10) + '0');
-			_putchar((min % 10) + '0');
-			_putchar('\n');
+			if (i == '2' && j == '4')
+				break;
+			for (k = '0'; k <= '5'; k++)
+			{
+				for (l = '0'; l <= '9'; l++)
+				{
+					_putchar(i);
+					_putchar(j);
+					_putchar(':');
+					_putchar(k);
+					_putchar(l);
+					_putchar('\n');
+				}
+			}
 		}
 	}
 }

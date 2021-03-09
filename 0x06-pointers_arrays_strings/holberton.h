@@ -1,46 +1,19 @@
-#ifndef holberton
-#define holberton
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 
+#include <stdio.h>
 
-int _putchar (char c);
-void print_alphabet(void);
-void print_alphabet_x10(void);
-int _islower(int c);
-int _isalpha(int c);
-int print_sign(int n);
-int _abs(int);
-int print_last_digit(int);
-void jack_bauer(void);
-void times_table(void);
-int add(int, int);
-int _isupper(int c);
-int _isdigit(int c);
-int mul(int a, int b);
-void print_numbers(void);
-void print_most_numbers(void);
-void more_numbers(void);
-void print_line(int n);
-void print_diagonal(int n);
-void print_square(int size);
-void print_triangle(int size);
-char *_strcat(char *dest, char *src);
-int _abs(int);
-int print_last_digit(int);
-void jack_bauer(void);
-void times_table(void);
-int add(int, int);
-void print_to_98(int n);
-char *_strncat(char *dest, char *src, int n);
-char *_strncpy(char *dest, char *src, int n);
-int _strcmp(char *s1, char *s2);
-void reverse_array(int *a, int n);
+int _putchar(char);
+char *_strcat(char *, char *);
+char *_strncat(char *, char *, int );
+char *_strncpy(char *, char *, int);
+int _strcmp(char *, char *);
+void reverse_array(int *, int);
 char *string_toupper(char *);
-char *_strcat(char *dest, char *src);
 char *cap_string(char *);
-char *leet(char *str1);
+char *leet(char *);
 char *rot13(char *);
+void print_number(int);
 
 
-
-
-#endif
+#endif /* HOLBERTON_H */

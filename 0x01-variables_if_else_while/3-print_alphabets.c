@@ -1,26 +1,22 @@
-#include <stdlib.h>
 #include <stdio.h>
+/* more headers goes there */
+
+/* betty style doc for function main goes there */
+
 /**
- *main - Entry point
+ * main - Entry point
  *
- *Description: Positive anything is better than negative nothing
- *
- *Return: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char ab;
-	char AB;
+	char c;
 
-	for (ab = 'a' ; ab <= 'z' ; ab++)
-	{
-		putchar(ab);
-	}
-	for (AB = 'A' ; AB <= 'Z' ; AB++)
-	{
-		putchar(AB);
-	}
+	for (c = 'a'; c <= 'z'; c++)
+		putchar(c);
+	for (c = 'A'; c <= 'Z'; c++)
+		putchar(c);
 	putchar('\n');
 	return (0);
 }

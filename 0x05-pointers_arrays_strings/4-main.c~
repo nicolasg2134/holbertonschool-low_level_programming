@@ -1,5 +1,0 @@
-#include "holbeton.h"
-void print_rev(char *s)
-{
-
-}

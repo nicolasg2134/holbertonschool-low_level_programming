@@ -1,20 +1,20 @@
 #include <stdio.h>
+/* more headers goes there */
+
+/* betty style doc for function main goes there */
 
 /**
- * main - Prints the alphabet at reverse
+ * main - Entry point
  *
- * Return: Always 0 (Succes)
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-char cba;
+	char c;
 
-for (cba = 'z'; cba >= 'a'; cba--)
-{
-putchar(cba);
-}
-
-putchar('\n');
-
-return (0);
+	for (c = 'z'; c >= 'a'; c--)
+		putchar(c);
+	putchar('\n');
+	return (0);
 }

@@ -1,19 +1,22 @@
 #include <stdio.h>
+/* more headers goes there */
+
+/* betty style doc for function main goes there */
+
 /**
- * main - Prints the numbers since 0 to 9
+ * main - Entry point
  *
- * Return: Always 0 (Succes)
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-int n;
 
+	int n;
 
-for (n = '0'; n <= '9'; n++)
-{
-putchar(n);
-}
-putchar('\n');
+	for (n = 0; n < 10; n++)
+		printf("%i", n);
+	printf("\n");
 
-return (0);
+	return (0);
 }

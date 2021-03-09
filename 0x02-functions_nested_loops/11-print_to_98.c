@@ -1,23 +1,32 @@
+#include "holberton.h"
 #include <stdio.h>
-
 /**
- * print_to_98 - Prints all natural numbers from input to 98
+ * print_to_98 - Print the numbers from the input to 98..
+ * @n: Holds the integer for the function.
  *
- * @n: The number to begin counting at.
+ * Return: Always 0.
  */
 void print_to_98(int n)
 {
-	if (n >= 98)
-	{
-		while (n > 98)
-			printf("%d, ", n--);
-		printf("%d\n", n);
-	}
+	int i;
 
+	if (n <= 98)
+	{
+		for (i = n; i <= 98; i++)
+		{
+			printf("%d", i);
+			if (i < 98)
+				printf(", ");
+		}
+	}
 	else
 	{
-		while (n < 98)
-			printf("%d, ", n++);
-		printf("%d\n", n);
+		for (i = n; i >= 98; i--)
+		{
+			printf("%d", i);
+			if (i > 98)
+				printf(", ");
+		}
 	}
+	printf("\n");
 }

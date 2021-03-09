@@ -1,26 +1,29 @@
 #include <stdio.h>
+/* more headers goes there */
+
+/* betty style doc for function main goes there */
 
 /**
- * main - Prints a serie of numbers with commas
+ * main - Entry point
  *
- * Return: Always 0 (Success);
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-int n;
 
-for (n = '0'; n <= '9'; n++)
-{
-putchar(n);
+	int n;
 
-if (n != '9')
-{
-putchar(',');
-putchar(' ');
-}
-}
+	for (n = 48; n <= 57; n++)
+	{
+		putchar(n);
+		if (n < 57)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
 
-putchar('\n');
-
-return (0);
+	return (0);
 }

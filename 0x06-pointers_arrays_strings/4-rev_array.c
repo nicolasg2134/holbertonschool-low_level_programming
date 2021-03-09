@@ -1,26 +1,26 @@
 #include "holberton.h"
-
 /**
- * reverse_array - Reverse String
- * @a: Strng 1
- * @n: Variable of Entero
+ * reverse_array - Compare two strings
+ * @a: Integer array
+ * @n: Number of elements in the array
  *
- * Description: Reverse an string on numbers
- * Return: Always 0 (Success)
+ * Return: Nothing (void)
  */
-
 void reverse_array(int *a, int n)
 {
-	int rev = 0;
-	int arr;
+	int i;
+	int tmp[1000];
+	int j;
+	int k = n - 1;
 
-	while (rev != n)
+	for (i = 0; i < n; i++)
 	{
-		arr = a[rev];
-		a[rev] = a[n];
-		a[n] = arr;
-		n--;
-		rev++;
+		tmp[i] = a[i];
 	}
-	return(a);
+	while (j < n)
+	{
+		*(a + j) = *(tmp + k);
+		j++;
+		k--;
+	}
 }

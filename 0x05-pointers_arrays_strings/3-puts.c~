@@ -1,8 +1,0 @@
-void _puts(char *str)
-{
-int pt;
-for(pt = 0; *(str + pt) != '\0'; pt++))
-
-_putchar(*(str + pt));
-_putchar('\n');
-}

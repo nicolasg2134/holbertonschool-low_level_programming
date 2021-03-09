@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
- * reset_to_98 - Entry point
- * @n: pointer to work
+ * reset_to_98 - Reset the variable sent to the function at 98
+ * @n: Pointer to the integer sent to the function
  *
- * Description: Reset a variable to 98
  * Return: Nothing
- */
+*/
+
 void reset_to_98(int *n)
 {
-*n = 98;
+	*n = 98;
 }

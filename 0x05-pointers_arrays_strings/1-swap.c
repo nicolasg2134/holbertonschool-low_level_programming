@@ -1,15 +1,18 @@
+#include "holberton.h"
+
 /**
- * swap_int - Entry point
- * @a: pointer to work
- * @b: other pointer
+ * swap_int - Swap the value of two integers
+ * @a: Integer a
+ * @b: Integer b
  *
- * Description: Reset a variable to 98
  * Return: Nothing
- */
+*/
 
 void swap_int(int *a, int *b)
 {
-	int swp = *a;
+	int c;
+
+	c = *a;
 	*a = *b;
-	*b = swp;
+	*b = c;
 }
