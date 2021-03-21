@@ -1,15 +1,6 @@
 #ifndef _VARIADIC_FUNCTIONS_H_
 #define _VARIADIC_FUNCTIONS_H_
-/**
- *struct op - struct op
- *@c: string
- *@function: pointer to function
- */
-typedef struct op
-{
-	char *c;
-	void (*function)();
-} opt;
+
 
 int _putchar(char);
 int sum_them_all(const unsigned int n, ...);
