@@ -1,94 +1,49 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include "variadic_functions.h"
-
 /**
- * print_char - prints chars
- * @print: parameter print.
- * Return nothing
+ * print_all - Print strings with a separator.
+ * @format: Format string
+ *
+ * Return: Nothing (void)
  */
-
-void print_char(va_list print)
+void print_all(const char *const format, ...)
 {
-	printf("%c", va_arg(print, int));
-}
+	unsigned int i = 0;
+	char *arg_s;
+	va_list arguments;
 
-/**
- * print_int - prints integrer
- * @print: parameter print.
- * Return nothing
- */
-
-void print_int(va_list print)
-{
-	printf("%d", va_arg(print, int));
-}
-
-/**
- * print_float - prints floats
- * @print: parameter print.
- * Return nothing
- */
-
-void print_float(va_list print)
-{
-	printf("%f", va_arg(print, double));
-}
-
-/**
- * print_string - prints string
- * @print: parameter pritn
- * Return nothing
- */
-
-void print_string(va_list print)
-{
-	char *check;
-
-	check = va_arg(print, char*);
-	if (check == NULL)
+	va_start(arguments, format);
+	while (*(format + i) != '\0' && (format))
 	{
-		printf("(nil)");
-		return;
-	}
-	printf("%s", check);
-}
-
-/**
- * print_all - prints all
- * @format: parameter format
- * Return nothing
- */
-void print_all(const char * const format, ...)
-{
-	int i = 0, j = 0;
-	va_list print;
-	char *sp;
-	opt options[] = {
-		{"c", print_char},
-		{"i", print_int},
-		{"f", print_float},
-		{"s", print_string},
-		{NULL, NULL}
-	};
-
-	va_start(print, format);
-	seperator = "";
-	while (format && format[i])
-	{
-		j = 0;
-		while (options[j].c != NULL)
+		switch (*(format + i))
 		{
-			if (format[i] == options[j].c[0])
+		case 's':
+			arg_s = va_arg(arguments, char *);
+			if (arg_s == NULL)
 			{
-				printf("%s", seperator);
-				options[j].function(print);
-				seperator = ", ";
+				printf("(nil)");
+				break;
 			}
-			j++;
+			printf("%s", arg_s);
+			break;
+		case 'i':
+			printf("%d", va_arg(arguments, int));
+			break;
+		case 'f':
+			printf("%f", (float) va_arg(arguments, double));
+			break;
+		case 'c':
+			printf("%c", (char) va_arg(arguments, int));
+			break;
+		default:
+			i++;
+			continue;
 		}
+		if (*(format + i + 1) != '\0')
+			printf(", ");
 		i++;
 	}
 	printf("\n");
-	va_end(print);
+	va_end(arguments);
 }
