@@ -43,3 +43,41 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	return (my_dog);
 }
+
+/**
+ * _strcpy - Copy a string
+ * @dest: Pointer to the string array for copying
+ * @src: Number of elements to extract
+ *
+ * Return: Nothing
+*/
+char *_strcpy(char *dest, char *src)
+{
+	int i = 0;
+
+	while (*(src + i) != '\0')
+	{
+		*(dest + i) = *(src + i);
+		i++;
+	}
+	*(dest + i) = '\0';
+	return (dest);
+}
+
+/**
+ * _strlen - Determines the length of a string.
+ * @s: Set of characters
+ *
+ * Return: Nothing
+*/
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (*(s + i) != '\0')
+	{
+		i++;
+	}
+	i++;
+	return (i);
+}
