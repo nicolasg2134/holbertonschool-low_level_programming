@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include "lists.h"
+
 /**
- *print_listint - prints all the elements of a listint_t list
- *@h: element of listint_t
- *Return: number of elemento of the listint_t list
+ *print_listint - prints all the elements
+ *@h: head element
+ *Return: number of elemento
  */
+
 size_t print_listint(const listint_t *h)
 {
 	size_t i;
