@@ -1,24 +1,18 @@
-#include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 #include "lists.h"
-
 /**
- * print_listint - check the code for Holberton School students.
- * @h: Head node to list
- *
- * Return: Size of the list
+ *print_listint - prints all the elements of a listint_t list
+ *@h: element of listint_t
+ *Return: number of elemento of the listint_t list
  */
 size_t print_listint(const listint_t *h)
 {
-	unsigned int recorre = 0;
+	size_t i;
 
-	while (h != NULL)
+	for (i = 0; h != NULL; ++i)
 	{
 		printf("%d\n", h->n);
 		h = h->next;
-		recorre++;
 	}
-
-	return (recorre);
+	return (i);
 }
