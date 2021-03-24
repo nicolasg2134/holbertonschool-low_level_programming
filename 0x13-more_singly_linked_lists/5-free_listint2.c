@@ -5,7 +5,7 @@
 
 /**
  * free_listint2 -frees a list_t list.
- * @head: Double pointer to the actual position of the linked list (struct)
+ * @head: Double pointer to the actual position.
  *
  * Return: Nothing.
  */
@@ -16,7 +16,7 @@ void free_listint2(listint_t **head)
 
 	nodo_actual = *head;
 
-	while (actual_node != NULL)
+	while (nodo_actual != NULL)
 	{
 		*nodo_siguiente = nodo_actual->next;
 		nodo_actual->next = NULL;
