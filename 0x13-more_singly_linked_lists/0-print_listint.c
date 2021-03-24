@@ -11,7 +11,7 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	unsigned int  = 0;
+	unsigned int recorre = 0;
 
 	while (h != NULL)
 	{
