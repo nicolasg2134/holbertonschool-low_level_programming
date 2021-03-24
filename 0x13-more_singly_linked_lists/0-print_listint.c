@@ -20,5 +20,5 @@ size_t print_listint(const listint_t *h)
 		recorre++;
 	}
 
-	return (count);
+	return (recorre);
 }
