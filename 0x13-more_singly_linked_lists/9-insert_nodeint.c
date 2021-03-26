@@ -2,7 +2,7 @@
 #include "lists.h"
 /**
  * insert_nodeint_at_index - inserts a new node
- * @head: pointer to nodo 
+ * @head: pointer to nodo
  * @idx: Position of nodo new
  * @n: Number of passed
  *
@@ -42,4 +42,30 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	tmp->next = new;
 
 	return (tmp);
+}
+
+/**
+ * add_nodeint - adds a new node
+ * @head: Pointer to the potitions
+ * @n: Value to include in the new node
+ *
+ * Return: Size
+ */
+listint_t *add_nodeint(listint_t **head, const int n)
+{
+	listint_t *new;
+
+	if (head == NULL)
+		return (NULL);
+
+	new = malloc(sizeof(listint_t));
+
+	if (new == NULL)
+		return (NULL);
+
+	new->n = n;
+	new->next = *head;
+	*head = new;
+
+	return (*head);
 }
