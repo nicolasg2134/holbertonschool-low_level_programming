@@ -1,20 +1,24 @@
+#include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 #include "lists.h"
 
 /**
- *print_listint - prints all the elements
- *@h: head element
- *Return: number of elemento
+ * print_listint - print list node
+ * @h: Head node to list
+ *
+ * Return: Size of the list
  */
-
 size_t print_listint(const listint_t *h)
 {
-	size_t i;
+	unsigned int recorre = 0;
 
-	for (i = 0; h != NULL; ++i)
+	while (h != NULL)
 	{
 		printf("%d\n", h->n);
 		h = h->next;
+		recorre++;
 	}
-	return (i);
+
+	return (recorre);
 }

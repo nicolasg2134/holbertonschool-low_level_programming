@@ -5,23 +5,23 @@
 
 /**
  * pop_listint - Deletes head node and returns the head integer.
- * @head: Double pointer to the actual position of the linked list
+ * @head: Double pointer to the actual position of the linked list (struct)
  *
- * Return: node data.
+ * Return: Header's node data (n).
  */
 int pop_listint(listint_t **head)
 {
-	listint_t *ptr;
-	int valor;
+	listint_t *tmp;
+	int val;
 
 	if (*head == NULL)
 		return (0);
 
-	ptr = *head;
-	valor = ptr->n;
-	ptr = ptr->next;
+	tmp = *head;
+	val = tmp->n;
+	tmp = tmp->next;
 	free(*head);
-	*head = ptr;
+	*head = tmp;
 
-	return (valor);
+	return (val);
 }

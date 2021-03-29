@@ -5,8 +5,8 @@
 
 /**
  * add_nodeint - adds a new node at the beginning of a list_t list.
- * @head: Pointer to the actual position of the linked list
- * @n: Value to in the new node
+ * @head: Pointer to the actual position of the linked list (struct)
+ * @n: Value to include in the new node
  *
  * Return: Size of the linked_list.
  */
