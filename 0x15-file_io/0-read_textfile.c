@@ -1,20 +1,13 @@
 #include "holberton.h"
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>
-
 /**
- * read_textfile - reads a text file and prints it to the stdout.
+ * read_textfile - reads a text file.
  * @filename: Filename
- * @letters: Number of letters to be printed
- *
- * Return: Number of letters printed or 0 if error.
+ * @letters: Number of letters
+ * Return: Number of letters
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, bytes_read, bytes_wrote;
+	int fd, read, wrote;
 	char *buf;
 
 	if (filename == NULL)
@@ -30,17 +23,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buf == NULL)
 		return (0);
 
-	bytes_read = read(fd, buf, letters);
+	read = read(fd, buf, letters);
 
-	if (bytes_read == -1)
+	if (read == -1)
 	{
 		free(buf);
 		return (0);
 	}
 
-	bytes_wrote = write(STDOUT_FILENO, buf, bytes_read);
+	wrote = write(STDOUT_FILENO, buf, read);
 
-	if (bytes_read != bytes_wrote || bytes_wrote == -1)
+	if (read != wrote || wrote == -1)
 	{
 		free(buf);
 		return (0);
@@ -48,6 +41,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	free(buf);
 	close(fd);
-	return (bytes_wrote);
+	return (wrote);
 
 }

@@ -1,9 +1,4 @@
 #include "holberton.h"
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>
 /**
  * append_text_to_file - function that appends text at the end of a file.
  * @filename: Filename
@@ -13,7 +8,7 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd, bytes_wrote, len;
+	int fd, wrote, aux;
 
 	if (filename == NULL)
 		return (-1);
@@ -25,12 +20,12 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (text_content != NULL)
 	{
-		for (len = 0; text_content[len] != '\0'; len++)
+		for (aux = 0; text_content[aux] != '\0'; aux++)
 			;
 
-		bytes_wrote = write(fd, text_content, len);
+		wrote = write(fd, text_content, aux);
 
-		if (bytes_wrote == -1)
+		if (wrote == -1)
 		{
 			return (-1);
 		}
