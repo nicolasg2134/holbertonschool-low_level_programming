@@ -1,4 +1,9 @@
 #include "holberton.h"
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdlib.h>
 /**
  * append_text_to_file - function that appends text at the end of a file.
  * @filename: Filename
