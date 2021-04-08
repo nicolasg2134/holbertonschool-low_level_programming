@@ -1,28 +1,39 @@
 #include "holberton.h"
+#include <stdlib.h>
 /**
- * print_number - Print an integer
- * @num: Number for printing
- *
- * Return: Nothing (void)
+ * print_number - check the code for Holberton.
+ * @n: is a int number
+ * Return: Always 0.
  */
-
-void print_number(int num)
+void print_number(int n)
 {
-	unsigned int firstnum = 0;
+	int cont = 1;
+	int num = n;
 
-	if (num % 10 < 0)
-	{
+	if (n < 0)
 		_putchar('-');
-		firstnum = num * -1;
-	}
-	else
-		firstnum = num;
 
-	if (firstnum < 10)
-		_putchar((firstnum % 10) + '0');
-	else
+	while (num / 10 != 0)
 	{
-		print_number(firstnum / 10);
-		_putchar((firstnum % 10) + '0');
+		cont = cont * 10;
+		num = num / 10;
 	}
+
+	while ((n / cont != 0) && (cont != 1))
+	{
+		_putchar(abs((n / cont)) + '0');
+
+		n = n % cont;
+
+		if (cont > 1)
+			cont = cont / 10;
+
+		while ((abs(n) < cont) && (cont > 1))
+		{
+			_putchar('0');
+			cont = cont / 10;
+		}
+	}
+
+	_putchar(abs(n) + '0');
 }
